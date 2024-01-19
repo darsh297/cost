@@ -1,0 +1,42 @@
+/* login.css */
+
+.container {
+    display: flex;
+    /* Add any additional container styles here */
+  }
+  
+  .left-side {
+    width: 40%;
+    /* Add any styles specific to the left side here */
+  }
+  
+  .logo {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .right-side {
+    width: 60%;
+    /* Add any styles specific to the right side here */
+  }
+  
+  .login-logo {
+    max-width: 20%;
+    max-height: 20%;
+  }
+  
+  .login-container {
+    text-align: center;
+    /* Add any styles specific to the login container here */
+  }
+  
+  .field {
+    text-align: left;
+    /* Add any styles specific to form fields here */
+  }
+  
+  .actions {
+    text-align: center;
+    /* Add any styles specific to form actions here */
+  }
+  

@@ -1,0 +1,58 @@
+
+
+
+<style>
+    .custom-button {
+      background-color: #365486 !important;
+      color: white !important;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .custom-button:hover {
+      background-color: #365486 !important;
+      color: white !important;
+      opacity: 0.8;
+    }
+  </style>
+
+
+
+   <div class="content">
+
+    <div style="text-align: left; margin-top:100px">
+      <h1>All Users</h1>
+
+      <% if @users.any? %>
+        <table class="table table-bordered table-striped">
+       
+          <thead class="thead-dark">
+            <tr>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.email %></td>
+                <td><%= user.role.role_name %></td>
+                <td>
+                  <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-warning btn-sm custom-button", style: "margin-right: 5px;" %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p>No users found.</p>
+      <% end %>
+    </div>
+  </div>
+   <div style="position: absolute; top: 130px; right: 10px;">
+      <%= link_to 'Add user', user_path, style: "color: white; text-decoration: none; padding: 10px; background-color: #365486; border-radius: 5px;" %>
+
+    </div>
+
+ <%= render 'layouts/sidebar' %>
